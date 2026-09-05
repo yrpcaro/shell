@@ -8,9 +8,11 @@ qml_module(caelestia-components
         linearindicatormanager.cpp
         sparklineitem.cpp
         visualiserbars.cpp
+        animatedsvg.cpp
     LIBRARIES
         Qt::Gui
         Qt::Quick
+        Qt::Svg
         caelestia-core
     DEPENDENCIES
         Caelestia

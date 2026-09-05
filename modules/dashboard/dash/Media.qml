@@ -160,7 +160,7 @@ Item {
         }
     }
 
-    AnimatedImage {
+    AnimatedGraphic {
         id: bongocat
 
         anchors.top: controls.bottom
@@ -175,6 +175,6 @@ Item {
         speed: Audio.beatTracker.bpm / Config.general.mediaGifSpeedAdjustment // qmllint disable unresolved-type
         source: Paths.absolutePath(Config.paths.mediaGif)
         asynchronous: true
-        fillMode: AnimatedImage.PreserveAspectFit
+        fillMode: Image.PreserveAspectFit
     }
 }
