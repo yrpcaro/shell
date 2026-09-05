@@ -1,3 +1,5 @@
+pragma ComponentBehavior: Bound
+
 import "center"
 import QtQuick
 import QtQuick.Layouts
@@ -9,45 +11,58 @@ ColumnLayout {
     id: root
 
     required property var lock
-    readonly property real centerScale: Math.min(1, (lock.screen?.height ?? 1440) / 1440)
-    readonly property int centerWidth: Tokens.sizes.lock.centerWidth * centerScale
+    readonly property real centerScale: Math.min(1, Math.max(0.7, (lock.screen?.height ?? 1080) / 1080))
+    readonly property int centerWidth: Math.min(420, (lock.screen?.width ?? 1920) * 0.8)
 
     Layout.preferredWidth: centerWidth
     Layout.fillWidth: false
     Layout.fillHeight: true
 
-    spacing: Tokens.spacing.largeIncreased
+    spacing: Tokens.spacing.medium
+
+    Item {
+        Layout.fillHeight: true
+    }
 
     Clock {
         Layout.alignment: Qt.AlignHCenter
-        Layout.topMargin: Tokens.padding.large
-        centerScale: root.centerScale
+        centerScale: root.centerScale * 0.85
     }
 
     StyledText {
         Layout.alignment: Qt.AlignHCenter
 
-        text: Time.format("dddd • d MMM").toUpperCase()
-        color: Colours.palette.m3onSurface
-        font: Tokens.font.title.builders.medium.weight(Font.DemiBold).build()
+        text: Time.format("dddd • d MMMM").toUpperCase()
+        color: Colours.palette.m3onSurfaceVariant
+        font: Tokens.font.title.builders.small.weight(Font.DemiBold).build()
+    }
+
+    Item {
+        Layout.preferredHeight: Tokens.spacing.medium
     }
 
     ProfilePic {
         Layout.alignment: Qt.AlignHCenter
-        Layout.topMargin: Tokens.spacing.extraExtraLarge * root.centerScale
-        Layout.bottomMargin: Tokens.spacing.extraLarge * root.centerScale
-        centerWidth: root.centerWidth
+    }
+
+    Item {
+        Layout.preferredHeight: Tokens.spacing.medium
     }
 
     PasswordInput {
         Layout.alignment: Qt.AlignHCenter
-        centerScale: Math.max(0.8, root.centerScale)
+        centerScale: root.centerScale
         centerWidth: root.centerWidth
         lock: root.lock
     }
 
     StateMessage {
+        Layout.alignment: Qt.AlignHCenter
         Layout.fillWidth: true
         pam: root.lock.pam
+    }
+
+    Item {
+        Layout.fillHeight: true
     }
 }
