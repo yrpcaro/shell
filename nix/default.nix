@@ -149,7 +149,7 @@ in
 
     meta = {
       description = "A fluid, morphing shell for your Linux desktop";
-      homepage = "https://github.com/caelestia-dots/shell";
+      homepage = "https://github.com/yrpcaro/shell";
       license = lib.licenses.gpl3Only;
       mainProgram = "caelestia-shell";
     };

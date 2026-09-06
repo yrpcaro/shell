@@ -2,9 +2,9 @@
 
 <div align=center>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/caelestia-dots/shell?style=for-the-badge&labelColor=101418&color=9ccbfb)
-![GitHub Repo stars](https://img.shields.io/github/stars/caelestia-dots/shell?style=for-the-badge&labelColor=101418&color=b9c8da)
-![GitHub repo size](https://img.shields.io/github/repo-size/caelestia-dots/shell?style=for-the-badge&labelColor=101418&color=d3bfe6)
+![GitHub last commit](https://img.shields.io/github/last-commit/yrpcaro/shell?style=for-the-badge&labelColor=101418&color=9ccbfb)
+![GitHub Repo stars](https://img.shields.io/github/stars/yrpcaro/shell?style=for-the-badge&labelColor=101418&color=b9c8da)
+![GitHub repo size](https://img.shields.io/github/repo-size/yrpcaro/shell?style=for-the-badge&labelColor=101418&color=d3bfe6)
 [![Ko-Fi donate](https://img.shields.io/badge/donate-kofi?style=for-the-badge&logo=ko-fi&logoColor=ffffff&label=ko-fi&labelColor=101418&color=f16061&link=https%3A%2F%2Fko-fi.com%2Fsoramane)](https://ko-fi.com/soramane)
 [![Discord invite](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FBGDCFCmMBk%3Fwith_counts%3Dtrue&query=approximate_member_count&style=for-the-badge&logo=discord&logoColor=ffffff&label=discord&labelColor=101418&color=96f1f1&link=https%3A%2F%2Fdiscord.gg%2FBGDCFCmMBk)][discord]
 
@@ -41,7 +41,7 @@ and likely to be unstable/have bugs. Regular users are recommended to use the st
 You can run the shell directly via `nix run`:
 
 ```sh
-nix run github:caelestia-dots/shell#with-cli
+nix run github:yrpcaro/shell#with-cli
 ```
 
 Or add it to your system configuration:
@@ -52,7 +52,7 @@ Or add it to your system configuration:
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     caelestia-shell = {
-      url = "github:caelestia-dots/shell";
+      url = "github:yrpcaro/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -70,7 +70,7 @@ For home-manager, you can also use Caelestia's Home Manager module (explained in
 
 Dependencies:
 
--   [`caelestia-cli`](https://github.com/caelestia-dots/cli)
+-   [`caelestia-cli`](https://github.com/yrpcaro/cli)
 -   [`quickshell-git`](https://git.outfoxxed.me/quickshell/quickshell) - this has to be the git version, not the latest tagged version
 -   `glibc`
 -   `gcc-libs`
@@ -109,7 +109,7 @@ Then build and install using CMake.
 
 ```sh
 cd $XDG_CONFIG_HOME/quickshell
-git clone https://github.com/caelestia-dots/shell.git caelestia
+git clone https://github.com/yrpcaro/shell.git caelestia
 
 cd caelestia
 cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/
@@ -146,7 +146,7 @@ via a `hl.on("hyprland.start", ...)` function in the Hyprland config.
 
 All keybinds are accessible via Hyprland [global shortcuts](https://wiki.hypr.land/Configuring/Basics/Binds/#dbus-global-shortcuts).
 If using the [Caelestia dotfiles][dots-repo], the keybinds are already configured for you.
-Otherwise, the [`keybinds.lua`](https://github.com/caelestia-dots/caelestia/blob/main/hypr/hyprland/keybinds.lua#L63-L67) file
+Otherwise, the [`keybinds.lua`](https://github.com/yrpcaro/caelestia/blob/main/hypr/hyprland/keybinds.lua#L63-L67) file
 contains an example of how to use global shortcuts.
 
 All IPC commands can be accessed via `caelestia shell ...`, for example:
@@ -892,7 +892,7 @@ You can join the Caelestia Discord server for assistance and discussion [here][d
 
 ### I want to make my own changes to the Hyprland config!
 
-Check out the configuring section on the [dots repo](https://github.com/caelestia-dots/caelestia#configuring).
+Check out the configuring section on the [dots repo](https://github.com/yrpcaro/caelestia#configuring).
 
 ### I want to make my own changes to other stuff!
 
@@ -901,7 +901,7 @@ See the [manual installation](#manual-installation) section for the correspondin
 ### I want to disable ___ feature!
 
 Please read the [configuring](#configuring) section.
-If there is no corresponding option, make a [feature request](https://github.com/caelestia-dots/shell/issues/new?template=feature.yml).
+If there is no corresponding option, make a [feature request](https://github.com/yrpcaro/shell/issues/new?template=feature.yml).
 
 ### How do I make my colour scheme change to match my wallpaper?
 
@@ -936,13 +936,13 @@ Finally, another thank you to all the configs I took inspiration from (only one 
 
 ## Stonks 📈
 
-<a href="https://www.star-history.com/#caelestia-dots/shell&Date">
+<a href="https://www.star-history.com/#yrpcaro/shell&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=caelestia-dots/shell&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=caelestia-dots/shell&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=caelestia-dots/shell&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=yrpcaro/shell&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=yrpcaro/shell&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=yrpcaro/shell&type=Date" />
  </picture>
 </a>
 
-[dots-repo]: https://github.com/caelestia-dots/caelestia
+[dots-repo]: https://github.com/yrpcaro/caelestia
 [discord]: https://caelestiashell.com/discord
